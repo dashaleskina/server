@@ -2,7 +2,8 @@
   "name": "server",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "python3 -m pytest tests/ -v",
+    "test:watch": "python3 -m pytest tests/ -v --watch",
     "dev": "bun run --watch src/index.ts",
     "db:push": "bun run drizzle-kit push",
     "db:migrate": "bun run drizzle-kit migrate"
